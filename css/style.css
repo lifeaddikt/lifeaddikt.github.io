@@ -1,0 +1,753 @@
+@font-face {
+    font-family:"Blue";
+    src:url('../webfonts/BluuNext-Titling.ttf');
+}
+
+@font-face {
+    font-family : "Redaction Title";
+    src:url(../webfonts/redaction/Redaction_20-Regular.woff2);
+    font-weight:normal;
+
+}
+
+@font-face {
+    font-family : "Redaction Title";
+    src:url(../webfonts/redaction/Redaction_20-Bold.woff2);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family : "Redaction";
+    src:url(../webfonts/redaction/Redaction_50-Regular.woff2);
+    font-weight:normal;
+}
+
+@font-face {
+    font-family : "Redaction";
+    src:url(../webfonts/redaction/Redaction_50-Bold.woff2);
+    font-weight:bold;
+}
+
+
+
+p, li, h3 {
+    font-family: 'Redaction', sans-serif;
+}
+
+
+h1, h2 {
+    font-family:'Redaction Title';
+    font-weight: normal;
+    margin:0;
+    animation : shining 2s infinite;
+}
+
+.home-header h1 {
+    margin-left: 1rem;
+    padding:0;
+    font-size: 3em;
+}
+
+
+
+#home-page {
+    overflow: hidden;
+    height:100vh;
+    width:100vw;
+    cursor : url('../ordi/curseur.png'),auto;
+    background-image: url('../mobile/fond.jpg');
+}
+
+@media (min-width:700px){ 
+   #home-page { 
+       background-image: url('../ordi/OKfond_accueil.jpg');     
+   }
+}
+
+
+body {
+    margin:0;
+    color:white;
+    padding:0;
+    background-size: cover;
+    background-size: 100% 100%;   
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position:relative;
+}
+
+/* Nav Mobile */
+
+nav a, header a {
+    text-decoration: none;
+    color : white;
+}
+
+nav ul li {
+    list-style: none;
+    font-size: 1.5em;
+    animation : shining 2s infinite;
+}
+
+
+
+@keyframes shining {
+    0% {
+        text-shadow: #fff 0 0 5px;
+    }
+    50% {
+        text-shadow: #fff 0 0 15px;
+    }
+    100% {
+        text-shadow: #fff 0 0 4px;
+    }
+}
+
+.home-nav ul {
+    padding : 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height:30vh;
+    margin-left:1em;
+}
+
+#media {
+    height:15vh;
+    position:absolute;
+    top:0;
+    right:1rem;
+}
+
+#media li {
+    display:flex;
+    justify-content: center;
+}
+
+
+ @media (min-width:700px){
+.home-header h1 {
+    font-size: 5em;
+    text-align: center;
+    padding-top: 1.5em;
+}
+
+nav ul li {
+    font-size:2em;
+}
+
+#media {
+    width:8em;
+    flex-direction: row;
+    justify-content: space-around;
+    right:5em;
+    bottom:-25px;
+    top:auto;
+}
+
+.home-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+
+
+
+#link1 {
+    position:absolute;
+    left:25%;
+    top:30%;
+}
+
+#link2 {
+    position:absolute;
+    left:15%;
+    top:40%;
+}
+
+#link3 {
+    position:absolute;
+    right:30%;
+    top:30%;
+}
+
+#link4 {
+    position:absolute;
+    right:15%;
+    top:40%;
+}
+
+@keyframes bobble {
+    0% {
+        transform: translate3d(50px, 40px, 0px);
+        animation-timing-function: ease-in;
+    }
+
+    50% {
+        transform: translate3d(50px, 60px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        transform: translate3d(50px, 40px, 0px);
+    }
+
+}
+
+.link-animation {
+    animation: bobble 2s infinite;
+}
+}
+
+/* Main content */
+
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+#etoile {
+    width:30%;
+    position:absolute;
+    right:3rem;
+    top:40%;
+    animation: rotation 8s infinite linear;
+}
+
+#dog {
+    width:75%;
+    position:absolute;
+    bottom:2em;
+    left:10%;
+}
+
+#etoile2 {
+    display:none;
+}
+
+.chaine {
+    display:none;
+}
+
+#nuage1 {
+    display:none;
+}
+
+#nuage2 {
+    display:none;
+}
+
+#nuage3 {
+    display:none;
+}
+
+@media (min-width:700px){
+
+    #nuage1 {
+        display:block;
+        position:absolute;
+        top:-30px;
+        left:-10px;
+        width:30em;
+        animation: cloud 27.5s linear infinite;
+    }
+
+    #nuage2 {
+        display:block;
+        position:absolute;
+        width:20em;
+        top:40px;
+        animation: smallcloud 20s linear infinite;
+    }
+
+    #nuage3 {
+        display:block;
+        position:absolute;
+        top:-75px;
+        left:-10px;
+        width:30em;
+        animation: cloud2 25s linear infinite;
+    }
+
+    @keyframes cloud {
+        0% {
+            transform: translateX(-600px);
+            opacity: 0.5;
+        }
+        10% {
+            opacity: 1;
+        }
+        55% {
+            opacity:0;
+        }
+        100% {
+            opacity: 0;
+            transform : translateX(100vw)
+        }
+    }
+
+    @keyframes cloud2 {
+        0% {
+            transform: translateX(-100px);
+            opacity: 0.5;
+        }
+        10% {
+            opacity: 1;
+        }
+        55% {
+            opacity:0;
+        }
+        100% {
+            opacity: 0;
+            transform : translateX(100vw)
+        }
+    }
+
+  
+
+    @keyframes smallcloud {
+        0% {
+            transform: translateX(-400px);
+            opacity: 0.5;
+        }
+        10% {
+            opacity: 1;
+        }
+        55% {
+            opacity:0;
+        }
+        100% {
+            opacity: 0;
+            transform : translateX(100vw)
+        }
+    }
+
+
+    .chaine {
+        display:block;
+        opacity: 0.75;
+    }
+
+    #etoile {
+        width:250px;
+        top:-5px;
+        right:2em;
+        z-index: 5;
+    }
+
+    #etoile2 {
+        display:block;
+        z-index:4;
+        position:absolute;
+        width:150px;
+        top: 12em;
+        right:1.5em;
+        animation: rotation 8s infinite linear;
+    }
+
+    #dog {
+        width:30%;
+        min-width: 300px;
+        bottom : 12.5%;
+        left:50%;
+        transform:translate(-50%, 0);
+    }
+
+    #h1 {
+        position:absolute;
+        top:0;
+        left:0;
+        z-index: 3;
+        height:3em;
+        width:100%;
+        }
+        
+    #h2 {
+            position : absolute;
+            bottom : 0;
+            left:0;
+            z-index: 3;
+            height:3em;
+            width:100%;
+        }
+
+    #v1 {
+        position:absolute;
+        left:0;
+        top:0;
+        z-index: 3;
+        width:3em;
+        height:100%;
+    }
+        
+    #v2 {
+        position : absolute;
+        right:0;
+        top:0;
+        z-index: 3;
+        width:3em;
+        height:100%;
+    }
+}
+
+/* Page About */
+
+#about-page {
+    background-image: url('../mobile/fond_phone.jpg');
+}
+
+#about-header h1 {
+    margin:0.1em 0.25em;
+}
+
+#about li {
+    list-style: none;
+}
+
+#about li:before {
+    content:'✿';
+    color:white;
+    margin-left: -10px;
+    margin-right: 10px;
+    }
+
+#about h2, h3 {
+    text-align: center;
+    animation: none;
+}
+
+#about p {
+    padding : 0 1em;
+    text-align: justify;
+}
+
+
+#about a {
+    text-decoration: none;
+    color: white;
+    animation : shining 2s infinite;
+}
+
+#about li {
+    text-align: justify;
+}
+
+#about ul {
+    padding : 0 1em;
+}
+
+#about h3 {
+    display: inline;
+    font-size: 1.5em;
+    position: relative;
+    font-weight: normal;
+}
+
+
+#about h3::before {
+    content: ' ';
+    height:2px;
+    width:100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -5;
+    background: linear-gradient(to left, #ccdff9, #4466fe3d);
+}
+
+#about-page article {
+    margin-bottom:3rem;
+    text-align: center;
+    padding:0 1em;
+}
+
+@media (min-width:700px){
+
+    #about h3 {
+        font-size: 2em;
+    }
+
+#about-page {
+    background-image: url(../ordi/OKfond_vide.jpg);
+    height:100vh;
+    width:100vw;
+    overflow: hidden;
+}
+
+
+    #about li:before {
+        margin-left: -20px;
+        }
+
+#about li {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 5em;
+    
+}
+
+
+#about {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+#about p {
+    width:60%;
+    font-size: larger;
+    text-align: center;
+}
+
+#about .chronologie {
+    width:60%;
+}
+
+#about .defile {
+    height:100%;
+    overflow: scroll;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about-header {
+    position: absolute;
+    top : 0.5em;
+    left: 0.5em;
+}
+}
+
+
+/* Works Page */
+
+#works-page {
+    background-image: url('../mobile/fond_phone.jpg');
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    width:100vw;
+}
+
+#works-page  li > img {
+    opacity: 0;
+    display: none;
+    position:absolute;
+    animation: fadeInFromNone 1.5s ease-out;
+}
+
+#works-page ul li a {
+    font-size: 30px;
+    text-decoration: none;
+    color:white;
+}
+
+#works-page ul {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    line-height: 60px;
+}
+
+ul li {
+    list-style:none;
+}
+
+
+#works-page header h1 {
+    position: fixed;
+    top : 0.5em;
+    left: 0.5em;
+}
+
+@media (min-width:700px){
+
+    .chaineor, .diable, .poemood, .poemood2, .gant, .entite, .kronik {
+        width:25%;
+        max-width:500px;
+    }
+
+    .chaineor, .diable, .gant, .shoe {
+        left:10%;
+        top:20%;
+        transform: rotateZ(-5deg);
+    }
+
+    .clope, .poemood {
+        right:15%;
+        top:30%;
+    }
+
+    .entite {
+        right:10%;
+        top:25%;
+    }
+
+    .poemood2, .shoe {
+        top:10px;
+        right:10px;
+        transform: rotateZ(5deg);
+    }
+
+    .kronik {
+        top:30%;
+        left:10%;
+        transform: rotateZ(-25deg);
+    }
+
+    .strass {
+        right:10%;
+    }
+
+
+
+    #works-page {
+        background-image: url(../ordi/OKfond_vide.jpg);
+    }
+
+
+  #works-page  li:hover > img {
+        opacity: 1;
+        display: block;
+    }
+
+    @keyframes fadeInFromNone {
+        0% {
+            display: none;
+            opacity: 0;
+        }
+    
+        1% {
+            display: block;
+            opacity: 0;
+        }
+    
+        100% {
+            display: block;
+            opacity: 1;
+        }
+    }
+}
+
+
+
+
+
+
+/* ---------------- PAGE ARTICLE ---------------- */
+
+
+#article-page {
+    background-image: url('../mobile/fond_phone.jpg');
+    width:100vw;
+}
+
+#article-page header {
+    display:flex;
+    justify-content: space-between;
+    margin:0.5em;
+}
+
+#article-page main {
+    display:flex;
+    flex-direction: column;
+}
+
+#article-page article img{
+    width:100%; 
+    max-width: 300px;
+    display:block;
+    margin: 0 auto;
+}
+
+#article-page figure img {
+    width:100%;
+    max-width: 300px;
+}
+
+#article-page article {
+    margin:1em;
+}
+
+#article-page aside {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-lecter {
+    display:flex;
+    width:50%;
+    justify-content: space-around;
+    margin:1em;
+}
+
+.article-lecter button:hover {
+    cursor: pointer;
+    color : red;
+}
+
+
+@media (min-width:700px){ 
+    #article-page {
+        background-image: url('../ordi/OKfond_accueil.jpg');
+        width:100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    #article-page main {
+        overflow: hidden;
+        height:100%;
+        flex-direction: row;
+        margin:3em 1.5em 0 1.5em;
+    }
+
+    #article-page article {
+        flex-basis:70%;
+        padding:1em;
+        margin : 0 auto;
+        overflow: scroll;
+    }
+
+    #article-page aside {
+        max-height: 85%;
+        flex-basis: 30%;
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+
+    #article-page aside figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .disable-scrollbars::-webkit-scrollbar {
+        width: 0px;
+        background: transparent; /* Chrome/Safari/Webkit */
+    }
+    
+    .disable-scrollbars {
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none;  /* IE 10+ */
+    }
+}
+
+
